@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Sign Up
+        </title>
+        <link rel="stylesheet" href="SignUp.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        </head>
+    <body>
+        <h1 style="text-align: center;font-size: 50px;">Om Textiles</h1>
+        <div class="signup">
+            <h1>Sign up</h1>
+            <form class="center" action="Signup.php" method="post" novalidate>
+                <div class="input_div">
+                    <input placeholder="" class="text_input" type="text" id="fullname" name="fullname">
+                    <label class="text_label" for="fullname">Full Name</label>
+                </div>
+                <div class="input_div">
+                    <input placeholder="" class="text_input" type="email" id="email" name="email">
+                    <label class="text_label" for="email">Email</label>
+                </div>
+                <div class="input_div">
+                    <input placeholder="" class="text_input" type="phone" id="phone_number" name="phone_number">
+                    <label class="text_label" for="phone_number">Phone number</label>
+                </div>
+                <div class="input_div">
+                    <input placeholder="" class="text_input"  type="password" id="password" name="password">
+                    <label class="text_label" for="password">Password</label>
+                </div>
+                <div class="input_div">
+                    <input placeholder="" class="text_input" type="password" id="password_confirmation" name="password_confirmation">
+                    <label class="text_label" for="password_confirmation">Repeat Password</label>
+                </div>
+                <div class="input_div">
+                    <input placeholder="" class="text_input" type="text" id="shippingaddress" name="shippingaddress">
+                    <label class="text_label" for="shippingaddress">Shipping address</label>
+                </div>
+                <br>
+                <a href="Homepage.php"><button>Sign up</button></a>
+                <br>
+                <br>
+                <p>Already have an account? <a href="Login.php">Log in</a> </p>
+            </form>
+        </div>
+    </body>
+</html>

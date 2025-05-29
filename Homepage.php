@@ -1,0 +1,99 @@
+<?php
+    include 'functions.php';
+    
+    $stmt = $dbconnect->prepare('SELECT * FROM products ORDER BY date_added DESC LIMIT 5');
+    $stmt->execute();
+    $latest_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
+<html>
+    <head>
+        <title>
+            Homepage
+        </title>
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="webfonts_css/all.css">
+        <link rel="stylesheet" href="webfonts_css/sharp-light.css">
+        <link rel="stylesheet" href="webfonts_css/sharp-regular.css">
+        <link rel="stylesheet" href="webfonts_css/sharp-solid.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar">
+            <h1 class="logo">Om textiles</h1>
+            <nav>
+                <ul class="nav_links">
+                    <li class="search">
+                        <form class="search_form" method="get" action="search_products.php">
+                            <input placeholder="Search..." class="search_input" type="search" id="search" name="search_input">
+                            <img src="white_searchicon.png" id="icon">
+                            <input type="submit" class="searchbtn" value="Search" name="search_btn">
+                        </form>
+                    </li>
+                    <li><a href="index.php?page=products"><i class="fa-thin fa-clothes-hanger fa-xl"></i></a></li>
+                    <li>
+                        <a href="index.php?page=cart"><i class="fa-thin fa-cart-shopping fa-xl"></i></a>
+                        <span><?=$num_items_in_cart?></span>
+                    </li>
+                    <li><a href="index.php?page=aboutUs"><i class="fa-thin fa-users-rectangle fa-xl"></i></a></li>
+                    <li><a href="index.php?page=contactUs"><i class="fa-thin fa-phone fa-xl"></i></a></li>
+                    <li><a href="index.php?page=Account"><i class="fa-thin fa-circle-user fa-xl"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <section class="slideshow">
+            <div class="slideshow_image">
+                <div class="slider">
+                    <img id="img-1" src="Product Images/Polyester kurti dupatta_1.jpg">
+                    <img id="img-2" src="Product Images/Polyester Sarees_1.jpg">
+                    <img id="img-3" src="Product Images/Viscose kurti dupatta_1.jpg">
+                    <img id="img-4" src="Product Images/Viscose Lehenga fabrics_1.jpg">
+                    <img id="img-5" src="Product Images/Viscose Sarees_1.jpg">
+                </div>
+                <div class="slider_nav">
+                    <a href="#img-1"></a>
+                    <a href="#img-2"></a>
+                    <a href="#img-3"></a>
+                    <a href="#img-4"></a>
+                    <a href="#img-5"></a>
+                </div>
+            </div>
+        </section>
+        <p class="catlabel">Categories</p>
+        <div class="categories">
+            <a class="cat" href="category_Dupatta_and_kurti_set.php"><button>Dupatta and kurti set</button></a>
+            <a class="cat" href="category_Sarees.php"><button>Sarees</button></a>
+            <a class="cat" href="category_Lehenga_fabric.php"><button>Lehenga fabric</button></a>
+            <a class="cat" href="category_Polyester_Jacquard.php"><button>Polyester Jacquard</button></a>
+            <a class="cat" href="category_Viscose_Jacquard.php"><button>Viscose Jacquard</button></a>
+        </div>
+        <br>
+        <main>
+            <div class="recentlyadded content-wrapper">
+                <h2 class="recentlyaddedlabel">Recently Added Products</h2>
+                <div class="products">
+                    <?php foreach ($latest_products as $product): ?>
+                    <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
+                        <img src="Product Images/<?=$product['p_img']?>" width="200" height="200" alt="<?=$product['p_name']?>">
+                        <span class="p_name"><?=$product['p_name']?></span>
+                        <span class="price">
+                        &#8377; <?=$product['price']?>
+                        </span>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <br>
+            
+        </main>
+        <footer>
+            <hr>
+            <br>
+            <p style="font-family: 'Cinzel', serif;">&copy; 2023, Om textiles</p>
+            <br>
+        </footer>
+    </body>
+</html>

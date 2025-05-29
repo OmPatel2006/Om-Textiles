@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body { 
+    background-color: rgb(24, 49, 83);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.logo {
+    color:#ffffff;
+    font-family: 'Cinzel', serif;
+    padding-left: 15px;
+    font-size: 50px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+li, a, button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 3%;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+.content-wrapper {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+main .product {
+    display: flex;
+    padding: 40px 0;
+}
+
+main .product .productimage {
+    width: 500px;
+    aspect-ratio: auto 500 / 500;
+    height: 500px;
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
+}
+
+main .product .productinfo form {
+	display: flex;
+	flex-flow: column;
+	margin: 40px 0;
+}
+
+main .product .productinfo form input[type="number"] {
+	width: 400px;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	color: #555555;
+	border-radius: 6px;
+    background-color: white;
+}
+
+main .product .productinfo form input[type="submit"] {
+	border: 0;
+	color: #FFFFFF;
+	width: 400px;
+	padding: 12px 0;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 6px;
+    background-color: rgba(0,136,169,0.7);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+main .product .productinfo form input[type="submit"]:hover {
+    background-color: rgba(0,136,169,1);
+}
+
+/* main > .product > .buttons {
+	text-align: right;
+	padding-bottom: 40px;
+}
+
+main > .product > .buttons > a {
+	display: inline-block;
+	text-decoration: none;
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background: #4e5c70;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+main > .product > .buttons > a:hover {
+	background: #1c56ae;
+} */
+
+main > .product > div {
+	padding-left: 15px;
+}
+
+main > .product .productinfo .price {
+	display: block;
+	font-size: 16px;
+	color: #999999;
+}
+
+/* .products-wrapper */
+/* main .product .productinfo  {
+    display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 0 0 0;
+} */
+
+main .product .productinfo {
+    display: block;
+	overflow: hidden;
+	text-decoration: none;
+    padding: 0px 10px 60px 10px;
+}
+
+.searchbtn {
+    background-color: rgba(0,136,169,0.7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    align-content: center;
+    text-align: center;
+    font-size: medium;
+    height: 45px;
+    width: 110px;
+    padding-left: 0px;
+}
+.searchbtn:hover {
+    background-color: rgba(0,136,169,1);
+}
+
+input {
+    background-color: rgb(24, 49, 83);
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    font-size: 16px;
+    color: white;
+    width: 20rem;
+    transition: all 200ms ease-in;
+}
+
+.search_input:hover {
+    border-color: #0088a9;
+}
+
+.search_input:focus {
+    border-color: aqua;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.search {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#icon {
+    position: absolute;
+    bottom: 19px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+main .product .productinfo .p_name {
+	padding: 20px 0 2px 0;
+    display: block;
+	font-weight: normal;
+	font-size: 30px;
+	width: 100%;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-left: 50px;
+}

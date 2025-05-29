@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body { 
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color:#ffffff;
+    font-family: 'Cinzel', serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.center{
+    align-items: center;
+}
+
+.signup{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    background-color:#000000;
+    height: 575px;
+    width: 575px;
+    border-radius: 20px;
+}
+
+.signup > h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    position: absolute;
+    padding-top: 8%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input_div {
+    position: relative;
+    margin: 20px 0;
+}
+
+.text_input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    outline: 0;
+    font-size: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    transition: all 200ms ease-in;
+    padding-left: 15px;
+}
+
+.text_input:hover {
+    border-color: rgb(0, 119, 255);
+}
+
+.text_input:focus {
+    border-color: aqua;
+}
+
+.text_label {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+    color: #ffffff;
+    font-size: 16px;
+    pointer-events: none;
+    padding: 0 10px;
+    cursor: text;
+    transition: top 200ms ease-in;
+    transition: left 200ms ease-in;
+    transition: font-size 200ms ease-in;
+    background-color: #000000;
+}
+
+.text_input:focus ~ .text_label, .text_input:not(:placeholder-shown).text_input:not(:focus) ~ .text_label {
+    top: -8px;
+    font-size: 12px;
+    left: 12px;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+.signup > form > div{
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: 2px solid;
+    background: teal;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border-color: black;
+}
+
+button:hover{
+    border-color: teal;
+    transition: .5s;
+}
+
+p {
+    text-align: center;
+    font-size: large;
+    color: rgb(255, 255, 255);
+}

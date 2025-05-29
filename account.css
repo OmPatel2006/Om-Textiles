@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body { 
+    background-color: rgb(24, 49, 83);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.logo {
+    color:#ffffff;
+    font-family: 'Cinzel', serif;
+    padding-left: 15px;
+    font-size: 50px;
+}
+
+li, a, button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 3%;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+.recentlyadded {
+    align-items: center;
+}
+
+.content-wrapper {
+	width: 1050px;
+	margin: 0 auto;
+}
+
+.account{
+	height: 310px;
+	width: 500px;
+	border-radius: 10px;
+	margin: 10px auto 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.text_label {
+	width: 100%;
+    color: #ffffff;
+    cursor: text;
+    padding: 0 10px;
+	font-size: larger;
+	text-align: center;
+}
+
+.account div p {
+	color: black;
+	background-color: #ffffff;
+	border-radius: 5px;
+	height: 30px;
+	width: auto;
+	padding: 0 10px;
+	font-size: large;
+}
+
+button {
+	align-self: center;
+    width: 100%;
+    height: 45px;
+    border: 2px solid;
+    background: teal;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border-color: rgb(24, 49, 83);
+}
+
+button:hover{
+    border-color: teal;
+    transition: .5s;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-left: 50px;
+}
